@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arjel — Science-Backed Skincare for Real Results</title>
+  <meta name="description" content="Dermatologist-developed skincare formulas powered by proven ingredients. Clear skin, lasting confidence. Shop by concern — acne, dark spots, oil control, and more.">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💧</text></svg>">
+</head>
+<body>
+
+<!-- ======== NAVBAR ======== -->
+<nav class="navbar" id="navbar">
+  <div class="container">
+    <a href="#" class="nav-logo">Arjel<span>.</span></a>
+    <div class="nav-links" id="navLinks">
+      <a href="#concerns">Shop by Concern</a>
+      <a href="#products">Bestsellers</a>
+      <a href="#ingredients">Ingredients</a>
+      <a href="#bundles">Bundles</a>
+      <a href="#routine">Build Routine</a>
+    </div>
+    <div class="nav-actions">
+      <button class="nav-icon" id="searchBtn" aria-label="Search">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+      </button>
+      <button class="nav-icon" aria-label="Account">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+      </button>
+      <button class="nav-icon" id="cartBtn" aria-label="Cart">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+        <span class="cart-count" id="cartCount">0</span>
+      </button>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- ======== HERO ======== -->
+<section class="hero" id="hero">
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-badge">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M9 12 11 14 15 10"/><circle cx="12" cy="12" r="10"/></svg>
+        Dermatologist Developed
+      </div>
+      <h1 class="hero-title">Clear Skin Starts with the <span class="highlight">Right Formula</span></h1>
+      <p class="hero-subtitle">Science-backed skincare crafted for South Asian skin. Powerful, proven ingredients — zero guesswork.</p>
+      <div class="hero-ctas">
+        <a href="#products" class="btn btn-primary">Shop Now <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M5 12h14m-7-7 7 7-7 7"/></svg></a>
+        <a href="#concerns" class="btn btn-secondary">Shop by Concern</a>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat"><div class="hero-stat-value">50K+</div><div class="hero-stat-label">Happy Customers</div></div>
+        <div class="hero-stat"><div class="hero-stat-value">4.8★</div><div class="hero-stat-label">Average Rating</div></div>
+        <div class="hero-stat"><div class="hero-stat-value">12+</div><div class="hero-stat-label">Active Products</div></div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-img-wrapper">
+        <img src="images/hero-product.png" alt="Arjel Skincare Hero Product" loading="eager">
+      </div>
+      <div class="hero-float hero-float-1">
+        <div class="float-icon blue">🧪</div>
+        <div class="float-text"><span>Key Ingredient</span><strong>Niacinamide 10%</strong></div>
+      </div>
+      <div class="hero-float hero-float-2">
+        <div class="float-icon green">✓</div>
+        <div class="float-text"><span>Clinically Proven</span><strong>94% Saw Results</strong></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======== SHOP BY CONCERN ======== -->
+<section class="concerns section" id="concerns">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-label">Find Your Solution</div>
+      <h2 class="section-title">Shop by Concern</h2>
+      <p class="section-subtitle">Every skin tells a different story. Find the targeted treatments formulated for your specific needs.</p>
+    </div>
+    <div class="concerns-grid">
+      <div class="concern-card reveal reveal-delay-1" data-concern="acne">
+        <div class="concern-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="3"/><path d="M12 1v4m0 14v4M4.22 4.22l2.83 2.83m9.9 9.9 2.83 2.83M1 12h4m14 0h4M4.22 19.78l2.83-2.83m9.9-9.9 2.83-2.83"/></svg>
+        </div>
+        <div class="concern-name">Acne</div>
+        <div class="concern-desc">Breakout control</div>
+      </div>
+      <div class="concern-card reveal reveal-delay-2" data-concern="dark-spots">
+        <div class="concern-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/></svg>
+        </div>
+        <div class="concern-name">Dark Spots</div>
+        <div class="concern-desc">Even tone & brightness</div>
+      </div>
+      <div class="concern-card reveal reveal-delay-3" data-concern="oil-control">
+        <div class="concern-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg>
+        </div>
+        <div class="concern-name">Oil Control</div>
+        <div class="concern-desc">Matte & balanced</div>
+      </div>
+      <div class="concern-card reveal reveal-delay-4" data-concern="sensitive">
+        <div class="concern-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        </div>
+        <div class="concern-name">Sensitive Skin</div>
+        <div class="concern-desc">Gentle & soothing</div>
+      </div>
+      <div class="concern-card reveal reveal-delay-5" data-concern="sun-protection">
+        <div class="concern-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="5"/><path d="M12 1v2m0 18v2M4.22 4.22l1.42 1.42m12.73 12.73 1.42 1.42M1 12h2m18 0h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+        </div>
+        <div class="concern-name">Sun Protection</div>
+        <div class="concern-desc">UV defense daily</div>
+      </div>
+      <div class="concern-card reveal reveal-delay-5" data-concern="anti-aging">
+        <div class="concern-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path d="M12 8v4l3 3"/><circle cx="12" cy="12" r="10"/></svg>
+        </div>
+        <div class="concern-name">Anti-Aging</div>
+        <div class="concern-desc">Youthful & firm</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======== BESTSELLERS ======== -->
+<section class="products section" id="products">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-label">Customer Favorites</div>
+      <h2 class="section-title">Bestsellers</h2>
+      <p class="section-subtitle">Tried, loved, and repurchased by thousands. These are the products that deliver real results.</p>
+    </div>
+    <div class="products-grid" id="productsGrid">
+      <!-- Product 1 -->
+      <div class="product-card reveal reveal-delay-1">
+        <span class="product-badge bestseller">Bestseller</span>
+        <div class="product-img">
+          <img src="images/hero-product.png" alt="Niacinamide Clarity Serum">
+          <div class="product-actions">
+            <button class="product-action-btn" aria-label="Quick view"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></button>
+            <button class="product-action-btn" aria-label="Wishlist"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></button>
+          </div>
+        </div>
+        <div class="product-info">
+          <div class="product-tag">Oil Control · Brightening</div>
+          <div class="product-name">Niacinamide Clarity Serum</div>
+          <div class="product-ingredient">Niacinamide 10% + Zinc PCA</div>
+          <div class="product-bottom">
+            <div class="product-price">₹649</div>
+            <div class="product-rating">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg>
+              4.9 (2.1k)
+            </div>
+          </div>
+          <button class="product-add-btn" data-product="Niacinamide Clarity Serum" data-price="649">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+            Add to Cart
+          </button>
+        </div>
+      </div>
+      <!-- Product 2 -->
+      <div class="product-card reveal reveal-delay-2">
+        <span class="product-badge new">New</span>
+        <div class="product-img">
+          <img src="images/product-cleanser.png" alt="Salicylic Acid Cleanser">
+          <div class="product-actions">
+            <button class="product-action-btn" aria-label="Quick view"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></button>
+            <button class="product-action-btn" aria-label="Wishlist"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></button>
+          </div>
+        </div>
+        <div class="product-info">
+          <div class="product-tag">Acne Control</div>
+          <div class="product-name">Salicylic Acid Cleanser</div>
+          <div class="product-ingredient">Salicylic Acid 2% + Aloe Vera</div>
+          <div class="product-bottom">
+            <div class="product-price">₹449</div>
+            <div class="product-rating">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg>
+              4.7 (1.4k)
+            </div>
+          </div>
+          <button class="product-add-btn" data-product="Salicylic Acid Cleanser" data-price="449">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+            Add to Cart
+          </button>
+        </div>
+      </div>
+      <!-- Product 3 -->
+      <div class="product-card reveal reveal-delay-3">
+        <div class="product-img">
+          <img src="images/product-sunscreen.png" alt="Invisible UV Shield SPF 50">
+          <div class="product-actions">
+            <button class="product-action-btn" aria-label="Quick view"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></button>
+            <button class="product-action-btn" aria-label="Wishlist"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></button>
+          </div>
+        </div>
+        <div class="product-info">
+          <div class="product-tag">Sun Protection</div>
+          <div class="product-name">Invisible UV Shield SPF 50</div>
+          <div class="product-ingredient">Zinc Oxide + Vitamin E</div>
+          <div class="product-bottom">
+            <div class="product-price">₹599</div>
+            <div class="product-rating">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg>
+              4.8 (980)
+            </div>
+          </div>
+          <button class="product-add-btn" data-product="Invisible UV Shield SPF 50" data-price="599">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+            Add to Cart
+          </button>
+        </div>
+      </div>
+      <!-- Product 4 -->
+      <div class="product-card reveal reveal-delay-4">
+        <span class="product-badge bestseller">Bestseller</span>
+        <div class="product-img">
+          <img src="images/product-moisturizer.png" alt="Hydra-Barrier Moisturizer">
+          <div class="product-actions">
+            <button class="product-action-btn" aria-label="Quick view"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></button>
+            <button class="product-action-btn" aria-label="Wishlist"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></button>
+          </div>
+        </div>
+        <div class="product-info">
+          <div class="product-tag">Hydration · Sensitive</div>
+          <div class="product-name">Hydra-Barrier Moisturizer</div>
+          <div class="product-ingredient">Hyaluronic Acid + Ceramides</div>
+          <div class="product-bottom">
+            <div class="product-price">₹549 <span class="original">₹699</span></div>
+            <div class="product-rating">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg>
+              4.9 (1.8k)
+            </div>
+          </div>
+          <button class="product-add-btn" data-product="Hydra-Barrier Moisturizer" data-price="549">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+            Add to Cart
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======== RESULTS / SOCIAL PROOF ======== -->
+<section class="results section" id="results">
+  <div class="container">
+    <div class="results-content">
+      <div class="results-image reveal">
+        <img src="images/before-after.png" alt="Before and After Results">
+        <div class="results-overlay">
+          <div class="tag">Real Results</div>
+          <h3>Visible improvement in 2–4 weeks</h3>
+        </div>
+      </div>
+      <div class="results-right">
+        <div class="reveal">
+          <div class="section-label">Proven Results</div>
+          <h2 class="section-title">Real Skin. Real Results.</h2>
+          <p class="section-subtitle">Our clinical studies and thousands of real user experiences speak for themselves.</p>
+        </div>
+        <div class="result-stat reveal reveal-delay-1">
+          <div class="result-stat-icon">📊</div>
+          <div><h4>94% Saw Clearer Skin</h4><p>In an 8-week study with 200+ participants using our Acne Control range.</p></div>
+        </div>
+        <div class="result-stat reveal reveal-delay-2">
+          <div class="result-stat-icon">⏱️</div>
+          <div><h4>Results in 14 Days</h4><p>Most users report visible improvement in dark spots within two weeks.</p></div>
+        </div>
+        <div class="testimonial-card reveal reveal-delay-3">
+          <div class="testimonial-stars">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg>
+          </div>
+          <p class="testimonial-text">"I've tried everything for my oily, acne-prone skin. The Niacinamide serum and Salicylic cleanser combo finally gave me results I could see. My skin has never been this clear!"</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">PR</div>
+            <div><div class="testimonial-name">Priya R.</div><div class="testimonial-info">Verified Buyer · Oily Skin</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======== ROUTINE BUILDER ======== -->
+<section class="routine section" id="routine">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-label">Personalized For You</div>
+      <h2 class="section-title">Build Your Routine</h2>
+      <p class="section-subtitle">Answer 3 quick questions and get a curated skincare routine tailored to your skin.</p>
+    </div>
+    <div class="routine-wrapper">
+      <div class="routine-steps">
+        <div class="routine-step active reveal" data-step="1">
+          <div class="routine-step-header">
+            <div class="routine-step-num">1</div>
+            <div>
+              <div class="routine-step-title">What's your skin type?</div>
+              <div class="routine-step-desc">This helps us choose the right base for your routine</div>
+            </div>
+          </div>
+          <div class="routine-options">
+            <button class="routine-option" data-value="oily">Oily</button>
+            <button class="routine-option" data-value="dry">Dry</button>
+            <button class="routine-option" data-value="combination">Combination</button>
+            <button class="routine-option" data-value="normal">Normal</button>
+            <button class="routine-option" data-value="sensitive">Sensitive</button>
+          </div>
+        </div>
+        <div class="routine-step reveal reveal-delay-1" data-step="2">
+          <div class="routine-step-header">
+            <div class="routine-step-num">2</div>
+            <div>
+              <div class="routine-step-title">Your main concern?</div>
+              <div class="routine-step-desc">We'll prioritize the right actives for you</div>
+            </div>
+          </div>
+          <div class="routine-options">
+            <button class="routine-option" data-value="acne">Acne & Breakouts</button>
+            <button class="routine-option" data-value="pigmentation">Dark Spots</button>
+            <button class="routine-option" data-value="aging">Fine Lines</button>
+            <button class="routine-option" data-value="dullness">Dullness</button>
+            <button class="routine-option" data-value="dryness">Dryness</button>
+          </div>
+        </div>
+        <div class="routine-step reveal reveal-delay-2" data-step="3">
+          <div class="routine-step-header">
+            <div class="routine-step-num">3</div>
+            <div>
+              <div class="routine-step-title">Your routine preference?</div>
+              <div class="routine-step-desc">Simple or comprehensive — you choose</div>
+            </div>
+          </div>
+          <div class="routine-options">
+            <button class="routine-option" data-value="minimal">Minimal (3 steps)</button>
+            <button class="routine-option" data-value="full">Full Routine (5 steps)</button>
+          </div>
+        </div>
+      </div>
+      <div class="routine-result reveal" id="routineResult">
+        <div class="routine-result-icon">🧴</div>
+        <h3>Your Personalized Routine</h3>
+        <p>Select your skin type, concern, and preference to get product recommendations tailored just for you.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======== INGREDIENTS ======== -->
+<section class="ingredients section" id="ingredients">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-label">What's Inside</div>
+      <h2 class="section-title">Hero Ingredients</h2>
+      <p class="section-subtitle">We believe in transparency. Every formula is built on clinically proven, powerhouse actives.</p>
+    </div>
+    <div class="ingredients-grid">
+      <div class="ingredient-card reveal reveal-delay-1">
+        <div class="ingredient-emoji">💧</div>
+        <div class="ingredient-name">Niacinamide</div>
+        <div class="ingredient-sci">Vitamin B3 – 10% concentration</div>
+        <div class="ingredient-desc">Regulates oil production, minimizes pores, and fades dark spots. A true multi-tasker for balanced, clear skin.</div>
+        <div class="ingredient-products">
+          <span class="ingredient-product-tag">Clarity Serum</span>
+          <span class="ingredient-product-tag">Oil Control Moisturizer</span>
+        </div>
+      </div>
+      <div class="ingredient-card reveal reveal-delay-2">
+        <div class="ingredient-emoji">🫧</div>
+        <div class="ingredient-name">Salicylic Acid</div>
+        <div class="ingredient-sci">BHA – 2% concentration</div>
+        <div class="ingredient-desc">Penetrates deep into pores to dissolve excess oil and dead skin cells. Your go-to for fighting stubborn acne.</div>
+        <div class="ingredient-products">
+          <span class="ingredient-product-tag">Acne Cleanser</span>
+          <span class="ingredient-product-tag">Spot Treatment</span>
+        </div>
+      </div>
+      <div class="ingredient-card reveal reveal-delay-3">
+        <div class="ingredient-emoji">✨</div>
+        <div class="ingredient-name">Vitamin C</div>
+        <div class="ingredient-sci">L-Ascorbic Acid – 15%</div>
+        <div class="ingredient-desc">Potent antioxidant that brightens skin tone, boosts collagen, and protects against environmental damage.</div>
+        <div class="ingredient-products">
+          <span class="ingredient-product-tag">Glow Serum</span>
+          <span class="ingredient-product-tag">Brightening Cream</span>
+        </div>
+      </div>
+      <div class="ingredient-card reveal reveal-delay-4">
+        <div class="ingredient-emoji">🌊</div>
+        <div class="ingredient-name">Hyaluronic Acid</div>
+        <div class="ingredient-sci">Low + High Molecular Weight</div>
+        <div class="ingredient-desc">Holds 1000x its weight in water. Delivers deep hydration without heaviness — perfect for humid climates.</div>
+        <div class="ingredient-products">
+          <span class="ingredient-product-tag">Hydra-Barrier</span>
+          <span class="ingredient-product-tag">Recovery Mask</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======== BUNDLES ======== -->
+<section class="bundles section" id="bundles">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-label">Better Together</div>
+      <h2 class="section-title">Skincare Bundles</h2>
+      <p class="section-subtitle">Curated kits that work in synergy. Save more when you build a complete routine.</p>
+    </div>
+    <div class="bundles-grid">
+      <div class="bundle-card reveal reveal-delay-1">
+        <div class="bundle-img" style="background:linear-gradient(135deg,#EDF4FF,#E0EEFF)">
+          <img src="images/product-trio.png" alt="Acne Control Kit">
+          <div class="bundle-save">Save 20%</div>
+        </div>
+        <div class="bundle-info">
+          <div class="bundle-name">Acne Control Kit</div>
+          <div class="bundle-desc">A complete 3-step system to clear, calm, and prevent breakouts on oily and acne-prone skin.</div>
+          <ul class="bundle-includes">
+            <li>Salicylic Acid Cleanser (100ml)</li>
+            <li>Niacinamide Clarity Serum (30ml)</li>
+            <li>Oil-Free Gel Moisturizer (50ml)</li>
+          </ul>
+          <div class="bundle-pricing">
+            <span class="bundle-price">₹1,299</span>
+            <span class="bundle-original">₹1,647</span>
+          </div>
+          <button class="btn btn-primary btn-sm product-add-btn" data-product="Acne Control Kit" data-price="1299" style="width:100%;border-radius:var(--radius-sm)">Add Kit to Cart</button>
+        </div>
+      </div>
+      <div class="bundle-card reveal reveal-delay-2">
+        <div class="bundle-img" style="background:linear-gradient(135deg,#FFF8ED,#FFEFD5)">
+          <img src="images/product-trio.png" alt="Daily Glow Routine">
+          <div class="bundle-save">Save 15%</div>
+        </div>
+        <div class="bundle-info">
+          <div class="bundle-name">Daily Glow Routine</div>
+          <div class="bundle-desc">Brighten your complexion and fade pigmentation with this powerful vitamin-rich routine.</div>
+          <ul class="bundle-includes">
+            <li>Gentle Cream Cleanser (100ml)</li>
+            <li>Vitamin C Glow Serum (30ml)</li>
+            <li>Hydra-Barrier Moisturizer (50ml)</li>
+          </ul>
+          <div class="bundle-pricing">
+            <span class="bundle-price">₹1,499</span>
+            <span class="bundle-original">₹1,797</span>
+          </div>
+          <button class="btn btn-primary btn-sm product-add-btn" data-product="Daily Glow Routine" data-price="1499" style="width:100%;border-radius:var(--radius-sm)">Add Kit to Cart</button>
+        </div>
+      </div>
+      <div class="bundle-card reveal reveal-delay-3">
+        <div class="bundle-img" style="background:linear-gradient(135deg,#F0FFF4,#E6F9ED)">
+          <img src="images/product-trio.png" alt="Sun Protection Set">
+          <div class="bundle-save">Save 18%</div>
+        </div>
+        <div class="bundle-info">
+          <div class="bundle-name">Sun Protection Set</div>
+          <div class="bundle-desc">Complete daily UV defense with antioxidant protection. Essential for South Asian climates.</div>
+          <ul class="bundle-includes">
+            <li>Invisible UV Shield SPF 50 (50ml)</li>
+            <li>Vitamin C Glow Serum (30ml)</li>
+            <li>After-Sun Recovery Mist (100ml)</li>
+          </ul>
+          <div class="bundle-pricing">
+            <span class="bundle-price">₹1,399</span>
+            <span class="bundle-original">₹1,697</span>
+          </div>
+          <button class="btn btn-primary btn-sm product-add-btn" data-product="Sun Protection Set" data-price="1399" style="width:100%;border-radius:var(--radius-sm)">Add Kit to Cart</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======== TRUST ======== -->
+<section class="trust section" id="trust">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-label">Why Arjel</div>
+      <h2 class="section-title">Formulated with Care</h2>
+    </div>
+    <div class="trust-grid">
+      <div class="trust-card reveal reveal-delay-1">
+        <div class="trust-icon">🔬</div>
+        <div class="trust-label">Dermatologically Tested</div>
+        <div class="trust-desc">Every product passes rigorous dermatological safety testing before launch.</div>
+      </div>
+      <div class="trust-card reveal reveal-delay-2">
+        <div class="trust-icon">🌿</div>
+        <div class="trust-label">Paraben-Free</div>
+        <div class="trust-desc">Clean formulas free from parabens, sulfates, and harsh chemicals.</div>
+      </div>
+      <div class="trust-card reveal reveal-delay-3">
+        <div class="trust-icon">🛡️</div>
+        <div class="trust-label">Non-Comedogenic</div>
+        <div class="trust-desc">Won't clog pores. Safe for acne-prone and sensitive skin types.</div>
+      </div>
+      <div class="trust-card reveal reveal-delay-4">
+        <div class="trust-icon">🐰</div>
+        <div class="trust-label">Cruelty-Free</div>
+        <div class="trust-desc">Never tested on animals. Certified cruelty-free and vegan-friendly.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======== UGC ======== -->
+<section class="ugc section" id="ugc">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-label">Community</div>
+      <h2 class="section-title">Real Skin. Real Results.</h2>
+      <p class="section-subtitle">Join thousands sharing their skin journeys with #ArjelSkin</p>
+    </div>
+    <div class="ugc-grid reveal">
+      <div class="ugc-item"><div class="ugc-placeholder" style="background:linear-gradient(135deg,#EDF4FF,#C8DEFF)">🧴</div></div>
+      <div class="ugc-item"><div class="ugc-placeholder" style="background:linear-gradient(135deg,#FFF8ED,#FFE4B5)">✨</div></div>
+      <div class="ugc-item"><div class="ugc-placeholder" style="background:linear-gradient(135deg,#F0FFF4,#C6F6D5)">🌿</div></div>
+      <div class="ugc-item"><div class="ugc-placeholder" style="background:linear-gradient(135deg,#FFF5F5,#FED7D7)">💧</div></div>
+      <div class="ugc-item"><div class="ugc-placeholder" style="background:linear-gradient(135deg,#F5F3FF,#DDD6FE)">🫧</div></div>
+      <div class="ugc-item"><div class="ugc-placeholder" style="background:linear-gradient(135deg,#FFFBEB,#FDE68A)">☀️</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ======== FOOTER ======== -->
+<footer class="footer" id="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo">Arjel<span>.</span></div>
+        <p class="footer-desc">Science-backed skincare developed for South Asian skin. Clear, confident skin — backed by dermatology.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Instagram"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg></a>
+          <a href="#" aria-label="Twitter"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53A4.48 4.48 0 0 0 12 7.5v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5 0-.28-.03-.56-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg></a>
+          <a href="#" aria-label="YouTube"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19.1c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Shop</h4>
+        <ul>
+          <li><a href="#">All Products</a></li>
+          <li><a href="#">Bestsellers</a></li>
+          <li><a href="#">New Arrivals</a></li>
+          <li><a href="#">Bundles</a></li>
+          <li><a href="#">Gift Cards</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Learn</h4>
+        <ul>
+          <li><a href="#">Our Ingredients</a></li>
+          <li><a href="#">Skin Guide</a></li>
+          <li><a href="#">About Arjel</a></li>
+          <li><a href="#">Blog</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Help</h4>
+        <ul>
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="#">Shipping Info</a></li>
+          <li><a href="#">Returns & Refunds</a></li>
+          <li><a href="#">FAQs</a></li>
+          <li><a href="#">Track Order</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Arjel Skincare. All rights reserved. Free shipping on orders above ₹999.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
