@@ -1,5 +1,8 @@
 import { Inter, Playfair_Display } from "next/font/google";
 import { CartProvider } from "./context/CartContext";
+import ScrollRevealProvider from "./components/ScrollRevealProvider";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 import "./globals.css";
 
 const inter = Inter({
@@ -25,6 +28,7 @@ export default function RootLayout({ children }) {
     <html lang="en" className={`${inter.variable} ${playfair.variable}`}>
       <body className="min-h-screen">
         <CartProvider>
+          <ScrollRevealProvider />
           {children}
         </CartProvider>
       </body>

@@ -53,7 +53,7 @@ export default function Hero() {
         {/* Visual */}
         <div className="relative flex justify-center items-center mt-10 lg:mt-0">
           <div className="relative w-full max-w-[480px] rounded-3xl overflow-hidden shadow-2xl">
-            <Image src="/images/Dermaline Pro.JPG" alt="Arjel Cosmeceuticals Hero Product" width={480} height={600} className="w-full h-auto" priority />
+            <Image src="/images/Anti-Aging Serum.jpg" alt="Arjel Cosmeceuticals Hero Product" width={480} height={600} className="w-full h-auto" priority />
           </div>
           {/* Floating cards */}
           <div className="hidden lg:flex absolute top-[15%] -left-7 bg-white rounded-xl px-4 py-3.5 shadow-lg items-center gap-2.5 animate-float z-20">

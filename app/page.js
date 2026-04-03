@@ -13,23 +13,6 @@ import Ugc from "./components/Ugc";
 import Footer from "./components/Footer";
 
 export default function Home() {
-  // Scroll reveal logic
-  useEffect(() => {
-    const revealElements = document.querySelectorAll(".reveal");
-    const revealOnScroll = () => {
-      const trigger = window.innerHeight * 0.88;
-      revealElements.forEach((el) => {
-        if (el.getBoundingClientRect().top < trigger) {
-          el.classList.add("visible");
-        }
-      });
-    };
-    window.addEventListener("scroll", revealOnScroll);
-    window.addEventListener("load", revealOnScroll);
-    // Explicitly run it on mount to show elements already in view
-    setTimeout(revealOnScroll, 100);
-    return () => window.removeEventListener("scroll", revealOnScroll);
-  }, []);
 
   return (
     <>
