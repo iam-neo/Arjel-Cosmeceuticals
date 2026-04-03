@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Footer() {
   return (
     <footer className="bg-foreground text-white pt-16">
@@ -6,7 +8,7 @@ export default function Footer() {
           
           <div className="lg:col-span-2 max-w-[280px] lg:mx-0 mx-auto text-center lg:text-left">
             <div className="font-[var(--font-playfair)] text-2xl font-bold mb-4">
-              Arjel<span className="text-primary-light">.</span>
+              Arjel Cosmeceuticals<span className="text-primary-light">.</span>
             </div>
             <p className="text-[0.88rem] text-white/60 leading-relaxed mb-6">
               Science-backed skincare developed for South Asian skin. Clear, confident skin — backed by dermatology.
@@ -38,10 +40,10 @@ export default function Footer() {
           <div className="text-center lg:text-left">
             <h4 className="text-[0.85rem] font-semibold uppercase tracking-[1.5px] mb-5 text-white/50">Learn</h4>
             <ul className="flex flex-col gap-2.5">
-              <li><a href="#" className="text-[0.88rem] text-white/60 hover:text-white transition-colors hover:pl-1">Our Ingredients</a></li>
-              <li><a href="#" className="text-[0.88rem] text-white/60 hover:text-white transition-colors hover:pl-1">Skin Guide</a></li>
-              <li><a href="#" className="text-[0.88rem] text-white/60 hover:text-white transition-colors hover:pl-1">About Arjel</a></li>
-              <li><a href="#" className="text-[0.88rem] text-white/60 hover:text-white transition-colors hover:pl-1">Blog</a></li>
+              <li><Link href="/ingredients/niacinamide" className="text-[0.88rem] text-white/60 hover:text-white transition-colors hover:pl-1">Our Ingredients</Link></li>
+              <li><Link href="/routine" className="text-[0.88rem] text-white/60 hover:text-white transition-colors hover:pl-1">Skin Guide</Link></li>
+              <li><Link href="/about" className="text-[0.88rem] text-white/60 hover:text-white transition-colors hover:pl-1">About Arjel Cosmeceuticals</Link></li>
+              <li><Link href="/contact" className="text-[0.88rem] text-white/60 hover:text-white transition-colors hover:pl-1">Contact</Link></li>
             </ul>
           </div>
 
@@ -59,7 +61,7 @@ export default function Footer() {
         </div>
         
         <div className="text-center py-6 text-[0.82rem] text-white/40">
-          © 2026 Arjel Skincare. All rights reserved. Free shipping on orders above ₹999.
+          © 2026 Arjel Cosmeceuticals. All rights reserved. Free shipping on orders above ₹999.
         </div>
       </div>
     </footer>

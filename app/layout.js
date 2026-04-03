@@ -1,4 +1,5 @@
 import { Inter, Playfair_Display } from "next/font/google";
+import { CartProvider } from "./context/CartContext";
 import "./globals.css";
 
 const inter = Inter({
@@ -14,7 +15,7 @@ const playfair = Playfair_Display({
 });
 
 export const metadata = {
-  title: "Arjel — Science-Backed Skincare for Real Results",
+  title: "Arjel Cosmeceuticals — Science-Backed Skincare for Real Results",
   description:
     "Dermatologist-developed skincare formulas powered by proven ingredients. Clear skin, lasting confidence. Shop by concern — acne, dark spots, oil control, and more.",
 };
@@ -22,7 +23,11 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${inter.variable} ${playfair.variable}`}>
-      <body className="min-h-screen">{children}</body>
+      <body className="min-h-screen">
+        <CartProvider>
+          {children}
+        </CartProvider>
+      </body>
     </html>
   );
 }

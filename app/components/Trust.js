@@ -11,7 +11,7 @@ export default function Trust() {
       <div className="max-w-[1280px] mx-auto px-6">
         <div className="text-center mb-16 reveal">
           <div className="text-xs font-semibold uppercase tracking-widest text-primary mb-3 flex items-center justify-center gap-2 before:content-[''] before:w-6 before:h-0.5 before:bg-primary before:rounded">
-            Why Arjel
+            Why Arjel Cosmeceuticals
           </div>
           <h2 className="font-[var(--font-playfair)] text-[clamp(1.75rem,4vw,2.75rem)] font-semibold leading-tight text-foreground">
             Formulated with Care

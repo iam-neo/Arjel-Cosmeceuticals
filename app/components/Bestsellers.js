@@ -1,13 +1,15 @@
-"use client";
 import Image from "next/image";
+import Link from "next/link";
+import { useCart } from "../context/CartContext";
 
-export default function Bestsellers({ onAddToCart }) {
+export default function Bestsellers() {
+  const { addToCart } = useCart();
   const products = [
     {
       id: "p1",
       badge: "Bestseller",
       badgeType: "accent",
-      image: "/images/hero-product.png",
+      image: "/images/Anti-Aging Serum.jpg",
       tag: "Oil Control · Brightening",
       name: "Niacinamide Clarity Serum",
       ingredient: "Niacinamide 10% + Zinc PCA",
@@ -18,7 +20,7 @@ export default function Bestsellers({ onAddToCart }) {
       id: "p2",
       badge: "New",
       badgeType: "primary",
-      image: "/images/product-cleanser.png",
+      image: "/images/Facewash.jpg",
       tag: "Acne Control",
       name: "Salicylic Acid Cleanser",
       ingredient: "Salicylic Acid 2% + Aloe Vera",
@@ -27,7 +29,7 @@ export default function Bestsellers({ onAddToCart }) {
     },
     {
       id: "p3",
-      image: "/images/product-sunscreen.png",
+      image: "/images/Sunscreen.jpg",
       tag: "Sun Protection",
       name: "Invisible UV Shield SPF 50",
       ingredient: "Zinc Oxide + Vitamin E",
@@ -38,7 +40,7 @@ export default function Bestsellers({ onAddToCart }) {
       id: "p4",
       badge: "Bestseller",
       badgeType: "accent",
-      image: "/images/product-moisturizer.png",
+      image: "/images/Moisturizer.jpg",
       tag: "Hydration · Sensitive",
       name: "Hydra-Barrier Moisturizer",
       ingredient: "Hyaluronic Acid + Ceramides",
@@ -78,7 +80,7 @@ export default function Bestsellers({ onAddToCart }) {
                   {p.badge}
                 </span>
               )}
-              <div className="w-full h-[280px] sm:h-[200px] lg:h-[280px] bg-background flex items-center justify-center overflow-hidden relative">
+              <Link href={`/product/${p.name.toLowerCase().replace(/\s+/g, '-')}`} className="w-full h-[280px] sm:h-[200px] lg:h-[280px] bg-background flex items-center justify-center overflow-hidden relative block">
                 <Image
                   src={p.image}
                   alt={p.name}
@@ -94,10 +96,10 @@ export default function Bestsellers({ onAddToCart }) {
                     <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" /></svg>
                   </button>
                 </div>
-              </div>
+              </Link>
               <div className="p-5">
                 <div className="text-[0.7rem] font-semibold text-primary uppercase tracking-wider mb-1.5">{p.tag}</div>
-                <div className="font-semibold text-base mb-1">{p.name}</div>
+                <Link href={`/product/${p.name.toLowerCase().replace(/\s+/g, '-')}`} className="font-semibold text-base mb-1 block hover:text-primary transition-colors">{p.name}</Link>
                 <div className="text-[0.82rem] text-text-muted mb-2.5">{p.ingredient}</div>
                 <div className="flex items-center justify-between">
                   <div className="text-[1.1rem] font-bold text-foreground">
@@ -110,7 +112,7 @@ export default function Bestsellers({ onAddToCart }) {
                   </div>
                 </div>
                 <button
-                  onClick={() => onAddToCart(p.name, p.price)}
+                  onClick={() => addToCart({ slug: p.id, name: p.name, price: p.price, img: p.image })}
                   className="w-full mt-3.5 p-3 bg-foreground text-white rounded-lg text-[0.85rem] font-semibold hover:bg-primary transition-colors flex items-center justify-center gap-2 group-btn"
                 >
                   <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4 group-btn-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z" /><path d="M3 6h18" /><path d="M16 10a4 4 0 0 1-8 0" /></svg>

@@ -19,7 +19,7 @@ export default function Ugc() {
             Real Skin. Real Results.
           </h2>
           <p className="text-[1.05rem] text-text-secondary max-w-xl mx-auto leading-relaxed">
-            Join thousands sharing their skin journeys with <strong>#ArjelSkin</strong>
+            Join thousands sharing their skin journeys with <strong>#ArjelCosmeceuticals</strong>
           </p>
         </div>
 

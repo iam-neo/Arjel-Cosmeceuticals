@@ -1,25 +1,27 @@
 "use client";
 import { useState } from "react";
 import Image from "next/image";
+import { useCart } from "../context/CartContext";
 
-export default function RoutineBuilder({ onAddToCart }) {
+export default function RoutineBuilder() {
+  const { addToCart } = useCart();
   const [activeStep, setActiveStep] = useState(1);
   const [selections, setSelections] = useState({ 1: null, 2: null, 3: null });
 
   const routines = {
     "oily-acne": [
-      { step: "Cleanse", name: "Salicylic Acid Cleanser", price: 449, img: "/images/product-cleanser.png" },
-      { step: "Tone", name: "Pore Refining Toner", price: 399, img: "/images/hero-product.png" },
-      { step: "Treat", name: "Niacinamide Clarity Serum", price: 649, img: "/images/hero-product.png" },
-      { step: "Moisturize", name: "Oil-Free Gel Moisturizer", price: 549, img: "/images/product-moisturizer.png" },
-      { step: "Protect", name: "Invisible UV Shield SPF 50", price: 599, img: "/images/product-sunscreen.png" }
+      { step: "Cleanse", name: "Salicylic Acid Cleanser", price: 449, img: "/images/Facewash.jpg" },
+      { step: "Tone", name: "Pore Refining Toner", price: 399, img: "/images/HA Serum.jpg" },
+      { step: "Treat", name: "Niacinamide Clarity Serum", price: 649, img: "/images/Anti-Aging Serum.jpg" },
+      { step: "Moisturize", name: "Oil-Free Gel Moisturizer", price: 549, img: "/images/Moisturizer new.JPG" },
+      { step: "Protect", name: "Invisible UV Shield SPF 50", price: 599, img: "/images/Sunscreen.jpg" }
     ],
     "default": [
-      { step: "Cleanse", name: "Gentle Cream Cleanser", price: 399, img: "/images/product-cleanser.png" },
-      { step: "Tone", name: "Hydrating Essence Toner", price: 449, img: "/images/hero-product.png" },
-      { step: "Treat", name: "Vitamin C Glow Serum", price: 699, img: "/images/hero-product.png" },
-      { step: "Moisturize", name: "Hydra-Barrier Moisturizer", price: 549, img: "/images/product-moisturizer.png" },
-      { step: "Protect", name: "Invisible UV Shield SPF 50", price: 599, img: "/images/product-sunscreen.png" }
+      { step: "Cleanse", name: "Gentle Cream Cleanser", price: 399, img: "/images/Facewash.jpg" },
+      { step: "Tone", name: "Hydrating Essence Toner", price: 449, img: "/images/HA Serumm.jpg" },
+      { step: "Treat", name: "Vitamin C Glow Serum", price: 699, img: "/images/Vitamine C.jpg" },
+      { step: "Moisturize", name: "Hydra-Barrier Moisturizer", price: 549, img: "/images/Moisturizer.jpg" },
+      { step: "Protect", name: "Invisible UV Shield SPF 50", price: 599, img: "/images/Sunscreen.jpg" }
     ]
   };
 
@@ -45,7 +47,7 @@ export default function RoutineBuilder({ onAddToCart }) {
 
   const handleAddRoutine = () => {
     currentRoutine.forEach(item => {
-      onAddToCart(item.name, item.price);
+      addToCart({ slug: item.name.toLowerCase().replace(/\s+/g, '-'), name: item.name, price: item.price, img: item.img });
     });
   };
 

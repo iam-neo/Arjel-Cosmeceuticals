@@ -1,7 +1,8 @@
-"use client";
 import Image from "next/image";
+import { useCart } from "../context/CartContext";
 
-export default function Bundles({ onAddToCart }) {
+export default function Bundles() {
+  const { addToCart } = useCart();
   const bundles = [
     {
       id: "b1",
@@ -12,7 +13,7 @@ export default function Bundles({ onAddToCart }) {
       price: 1299,
       originalPrice: 1647,
       bgColor: "from-[#EDF4FF] auto-to-[#E0EEFF]",
-      img: "/images/product-trio.png",
+      img: "/images/Dermaline Pro.JPG",
       colorClass: "bg-gradient-to-br from-[#EDF4FF] to-[#E0EEFF]",
     },
     {
@@ -24,7 +25,7 @@ export default function Bundles({ onAddToCart }) {
       price: 1499,
       originalPrice: 1797,
       bgColor: "from-[#FFF8ED] auto-to-[#FFEFD5]",
-      img: "/images/product-trio.png",
+      img: "/images/Vitamine C.jpg",
       colorClass: "bg-gradient-to-br from-[#FFF8ED] to-[#FFEFD5]",
     },
     {
@@ -36,7 +37,7 @@ export default function Bundles({ onAddToCart }) {
       price: 1399,
       originalPrice: 1697,
       bgColor: "from-[#F0FFF4] auto-to-[#E6F9ED]",
-      img: "/images/product-trio.png",
+      img: "/images/Sunscreen.jpg",
       colorClass: "bg-gradient-to-br from-[#F0FFF4] to-[#E6F9ED]",
     },
   ];
@@ -85,7 +86,7 @@ export default function Bundles({ onAddToCart }) {
                   <span className="text-[0.95rem] text-text-muted line-through">₹{b.originalPrice}</span>
                 </div>
                 <button 
-                  onClick={() => onAddToCart(b.name, b.price)}
+                  onClick={() => addToCart({ slug: b.id, name: b.name, price: b.price, img: b.img })}
                   className="w-full py-3 bg-primary text-white rounded-lg text-sm font-semibold hover:bg-primary-dark transition-colors shadow-sm"
                 >
                   Add Kit to Cart

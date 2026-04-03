@@ -13,8 +13,6 @@ import Ugc from "./components/Ugc";
 import Footer from "./components/Footer";
 
 export default function Home() {
-  const [cartCount, setCartCount] = useState(0);
-
   // Scroll reveal logic
   useEffect(() => {
     const revealElements = document.querySelectorAll(".reveal");
@@ -33,21 +31,17 @@ export default function Home() {
     return () => window.removeEventListener("scroll", revealOnScroll);
   }, []);
 
-  const handleAddToCart = () => {
-    setCartCount(prev => prev + 1);
-  };
-
   return (
     <>
-      <Navbar cartCount={cartCount} />
+      <Navbar />
       <main>
         <Hero />
         <Concerns />
-        <Bestsellers onAddToCart={handleAddToCart} />
+        <Bestsellers />
         <Results />
-        <RoutineBuilder onAddToCart={handleAddToCart} />
+        <RoutineBuilder />
         <Ingredients />
-        <Bundles onAddToCart={handleAddToCart} />
+        <Bundles />
         <Trust />
         <Ugc />
       </main>
