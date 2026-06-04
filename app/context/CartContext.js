@@ -10,11 +10,17 @@ export function CartProvider({ children }) {
 
   useEffect(() => {
     // Load from local storage
-    setIsMounted(true);
     const saved = localStorage.getItem("arjel_cart");
-    if (saved) {
-      setCart(JSON.parse(saved));
-    }
+    const parsed = saved ? JSON.parse(saved) : null;
+
+    const timeoutId = setTimeout(() => {
+      if (parsed) {
+        setCart(parsed);
+      }
+      setIsMounted(true);
+    }, 0);
+
+    return () => clearTimeout(timeoutId);
   }, []);
 
   useEffect(() => {
