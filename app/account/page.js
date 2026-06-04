@@ -22,7 +22,7 @@ export default function AccountPage() {
           <div className="bg-white rounded-2xl border border-border p-16 text-center shadow-sm">
             <div className="text-4xl mb-4">📦</div>
             <h3 className="text-lg font-semibold mb-2">No orders yet</h3>
-            <p className="text-text-secondary mb-6">You haven't placed any orders with this account.</p>
+            <p className="text-text-secondary mb-6">You haven&apos;t placed any orders with this account.</p>
             <a href="/shop" className="inline-flex py-3 px-6 bg-foreground text-white rounded-xl font-medium hover:bg-primary transition-colors hover:shadow-lg">Start Shopping</a>
           </div>
         </div>

@@ -49,7 +49,7 @@ export default function Results() {
                 ))}
               </div>
               <p className="text-[0.95rem] leading-relaxed text-text-secondary mb-4 italic">
-                "I've tried everything for my oily, acne-prone skin. The Niacinamide serum and Salicylic cleanser combo finally gave me results I could see. My skin has never been this clear!"
+                &ldquo;I&apos;ve tried everything for my oily, acne-prone skin. The Niacinamide serum and Salicylic cleanser combo finally gave me results I could see. My skin has never been this clear!&rdquo;
               </p>
               <div className="flex items-center gap-3">
                 <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary-light to-primary flex items-center justify-center text-white font-semibold text-[0.85rem]">PR</div>
