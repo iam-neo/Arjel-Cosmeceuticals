@@ -1,5 +1,6 @@
 "use client";
 import Link from "next/link";
+import Image from "next/image";
 import { useCart } from "../context/CartContext";
 
 export default function CheckoutPage() {
@@ -76,7 +77,7 @@ export default function CheckoutPage() {
               {cart.map(item => (
                 <div key={item.slug} className="flex justify-between items-center">
                   <div className="flex items-center gap-3">
-                    <div className="w-12 h-12 bg-white rounded overflow-hidden shrink-0"><img src={item.img} className="w-full h-full object-cover" /></div>
+                    <div className="w-12 h-12 bg-white rounded overflow-hidden shrink-0"><Image src={item.img} alt={item.name} width={48} height={48} className="w-full h-full object-cover" /></div>
                     <div>
                       <div className="font-semibold text-sm leading-tight">{item.name}</div>
                       <div className="text-xs text-text-muted">Qty: {item.quantity}</div>
