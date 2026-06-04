@@ -90,15 +90,16 @@ export default function Bestsellers() {
                   height={300}
                   className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                 />
-                <div className="absolute bottom-3 right-3 flex gap-2 opacity-0 translate-y-2 transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-0">
-                  <button className="w-9 h-9 bg-white text-foreground rounded-full flex items-center justify-center shadow-md hover:bg-primary hover:text-white transition-colors" aria-label="Quick view">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" /><circle cx="12" cy="12" r="3" /></svg>
-                  </button>
-                  <button className="w-9 h-9 bg-white text-foreground rounded-full flex items-center justify-center shadow-md hover:bg-primary hover:text-white transition-colors" aria-label="Wishlist">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" /></svg>
-                  </button>
-                </div>
               </Link>
+              {/* Moved buttons outside of Link to prevent React hydration crash */}
+              <div className="absolute top-[230px] sm:top-[150px] lg:top-[230px] right-3 flex gap-2 opacity-0 translate-y-2 transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-0 z-20">
+                <button className="w-9 h-9 bg-white text-foreground rounded-full flex items-center justify-center shadow-md hover:bg-primary hover:text-white transition-colors" aria-label="Quick view">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" /><circle cx="12" cy="12" r="3" /></svg>
+                </button>
+                <button className="w-9 h-9 bg-white text-foreground rounded-full flex items-center justify-center shadow-md hover:bg-primary hover:text-white transition-colors" aria-label="Wishlist">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" /></svg>
+                </button>
+              </div>
               <div className="p-5">
                 <div className="text-[0.7rem] font-semibold text-primary uppercase tracking-wider mb-1.5">{p.tag}</div>
                 <Link href={`/product/${p.name.toLowerCase().replace(/\s+/g, '-')}`} className="font-semibold text-base mb-1 block hover:text-primary transition-colors">{p.name}</Link>
